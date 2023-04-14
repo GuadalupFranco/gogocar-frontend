@@ -1,20 +1,15 @@
+import React from 'react';
+import { NativeRouter } from 'react-router-native';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import Main from './src/components/Main.jsx'
+import RegisterScreen from './screens/RegisterScreen.js'
+import LoginScreen from './screens/LoginScreen.js';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  return <>
+    <StatusBar style='light' />
+    <NativeRouter>
+      <Main />
+    </NativeRouter>
+  </>
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
